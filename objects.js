@@ -8,11 +8,6 @@ const people = [
 let newpeople = people.filter(a => a.age > 18); 
 console.log(newpeople);
 
-
-
-
-
-
 // Write a function that takes an array of objects, where each object represents a product with a name, price, and category property. The function should return an object that groups the products by their categories, with the category names as keys and the arrays of products as values.
 const products = [
   { name: 'Laptop', price: 1200, category: 'Electronics' },
@@ -21,11 +16,24 @@ const products = [
   { name: 'Shoes', price: 60, category: 'Clothing' },
 ];
 
-
-
-
-
-
+products.price=2700;
+products.category="Electronics";
+console.log({products});
+products.price=1500;
+products.category="Clothing";
+console.log({products});
+products.price=450;
+products.category="Elecrtonics";
+console.log({products});
+products.price=500;
+products.category="Clothing";
+console.log({products});
+let items=Object.assign(products);
+console.log({items});
+let keys= Object.keys(products);
+console.log({keys});
+let values=Object.values(products);
+console.log({values});
 
 
 
@@ -36,11 +44,11 @@ const students = [
   { name: 'Jim', scores: [70, 80, 75] },
   { name: 'Jill', scores: [85, 90, 84] },
 ];
-
-
-
-
-
+students.name="June"
+console.log(students.scores);
+console.log(students["name"]);
+console.log(students["name"]["scores"]);
+console.log({students});
 
 
 // Given an object representing a car, with properties for the make, model, year, and a method to display the car's information, write a function that takes the car object and adds a new method to the object called age. The age method should return the current age of the car based on the current year and the car's year property.
@@ -52,7 +60,7 @@ const students = [
 //     console.log(`Make: ${this.make}, Model: ${this.model}, Year: ${this.year}`);
 //   },
 // };
-const cars = {
+const car = {
   make: 'Ford',
   model: 'Ranger',
   year: 2023,
@@ -64,7 +72,7 @@ const cars = {
   car.Make=function(){
   console.log('4 years');
   }
-  console.log({cars});
-  console.log({cars});
-  car.displayInfo();
+  console.log({car});
+  console.log({car});
+  car.displayInfo(car);
   console.log(car)
